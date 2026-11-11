@@ -10,11 +10,11 @@
   <DefaultLocale>he-IL</DefaultLocale>
   <DisplayName DefaultValue="חיפוש עיצוב" />
   <Description DefaultValue="חיפוש לפי טקסט, לפי עיצוב, או טקסט + עיצוב, ובחירת התוצאה במסמך." />
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.png" />
-  <SupportUrl DefaultValue="https://localhost:3000/src/taskpane.html" />
+  <IconUrl DefaultValue="https://yehudit609.github.io/word_design_search/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://yehudit609.github.io/word_design_search/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://yehudit609.github.io/word_design_search/src/taskpane.html" />
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://yehudit609.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document" />
@@ -25,7 +25,7 @@
     </Sets>
   </Requirements>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://localhost:3000/src/taskpane.html" />
+    <SourceLocation DefaultValue="https://yehudit609.github.io/word_design_search/src/taskpane.html" />
   </DefaultSettings>
   <!-- נדרש לבחירת טווחים במסמך. הקוד אינו כותב למסמך ואינו משנה עיצוב. -->
   <Permissions>ReadWriteDocument</Permissions>
@@ -72,12 +72,12 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
-        <bt:Image id="Icon.32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-        <bt:Image id="Icon.80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+        <bt:Image id="Icon.16" DefaultValue="https://yehudit609.github.io/word_design_search/assets/icon-16.png" />
+        <bt:Image id="Icon.32" DefaultValue="https://yehudit609.github.io/word_design_search/assets/icon-32.png" />
+        <bt:Image id="Icon.80" DefaultValue="https://yehudit609.github.io/word_design_search/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/src/taskpane.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://yehudit609.github.io/word_design_search/src/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="חיפוש עיצוב מוכן" />
