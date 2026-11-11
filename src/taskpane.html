@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>חיפוש עיצוב</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <main>
+    <!-- 1. מה לחפש -->
+    <section class="card">
+      <h2>מה לחפש?</h2>
+      <input id="searchText" type="text" placeholder="טקסט לחיפוש (ריק = עיצוב בלבד)" autocomplete="off" maxlength="255">
+      <div class="options">
+        <label><input id="matchCase" type="checkbox"> התאמת אותיות גדולות/קטנות</label>
+        <label><input id="matchWholeWord" type="checkbox"> מילה שלמה</label>
+      </div>
+    </section>
+
+    <!-- 2. איזה עיצוב -->
+    <section class="card fmt">
+      <h2>איזה עיצוב?</h2>
+
+      <div class="row">
+        <label class="chk"><input id="chkBold" type="checkbox"> מודגש</label>
+        <select id="valBold"><option value="true">מודגש</option><option value="false">לא מודגש</option></select>
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkItalic" type="checkbox"> נטוי</label>
+        <select id="valItalic"><option value="true">נטוי</option><option value="false">לא נטוי</option></select>
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkUnderline" type="checkbox"> קו תחתון</label>
+        <select id="valUnderline"></select>
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkFont" type="checkbox"> גופן</label>
+        <input id="valFont" type="text" list="fontList" dir="ltr" placeholder="Arial">
+        <datalist id="fontList">
+          <option value="Arial"><option value="David"><option value="Frank Ruehl CLM">
+          <option value="Guttman Keren"><option value="Miriam"><option value="Narkisim">
+          <option value="Times New Roman"><option value="Calibri"><option value="Aptos">
+          <option value="Segoe UI"><option value="Tahoma"><option value="FrankRuehl">
+        </datalist>
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkSize" type="checkbox"> גודל</label>
+        <input id="valSize" type="number" min="1" max="1638" step="1" value="12">
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkColor" type="checkbox"> צבע טקסט</label>
+        <input id="valColor" type="color" value="#000000">
+      </div>
+      <div class="row">
+        <label class="chk"><input id="chkHighlight" type="checkbox"> צבע הדגשה</label>
+        <select id="valHighlight"></select>
+      </div>
+
+      <div class="actions">
+        <button id="btnTake" type="button" class="secondary">קח עיצוב מהבחירה</button>
+        <button id="btnSimilar" type="button" class="secondary">מצא מילים בעיצוב דומה</button>
+        <button id="btnClear" type="button" class="link">נקה עיצוב</button>
+      </div>
+    </section>
+
+    <!-- 3. חפש -->
+    <div class="search-bar">
+      <button id="btnSearch" type="button" class="primary">חפש</button>
+      <button id="btnCancel" type="button" class="link" hidden>ביטול</button>
+    </div>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <!-- 4. ניווט -->
+    <section class="card nav">
+      <button id="btnPrev" type="button" title="הקודם (Shift+Enter)" disabled>→ הקודם</button>
+      <span id="counter" class="counter">0 מתוך 0</span>
+      <button id="btnNext" type="button" title="הבא (Enter)" disabled>הבא ←</button>
+    </section>
+
+    <!-- 5. תוצאות -->
+    <section class="card results-card">
+      <h2>תוצאות</h2>
+      <p id="resultsEmpty" class="empty" hidden>לא נמצאו תוצאות.</p>
+      <ol id="results" class="results" role="listbox"></ol>
+    </section>
+  </main>
+  <script src="taskpane.js"></script>
+</body>
+</html>

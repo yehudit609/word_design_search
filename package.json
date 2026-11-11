@@ -1,0 +1,23 @@
+{
+  "name": "word-format-search",
+  "version": "2.1.0",
+  "description": "Word add-in: search by text, formatting, or text + formatting, with real Range selection.",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "certs": "office-addin-dev-certs install",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "test": "node tests/logic.test.js",
+    "test:ui": "node tests/ui.test.js"
+  },
+  "dependencies": {
+    "office-addin-dev-certs": "^2.0.0"
+  },
+  "devDependencies": {
+    "office-addin-manifest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
